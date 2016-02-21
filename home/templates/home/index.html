@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    {%load staticfiles %}
+    <head>
+        {% include 'home/head_links.html' %}
+    </head>
+    <body>
+        {% include 'home/nav-bar.html' %} 
+        <div id="carousel-example-generic" 
+            class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" 
+                    data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" 
+                    data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" 
+                    data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item bg bg1 active">
+                    <div class="carousel-caption">
+                        <h1 class="car-h1 text-uppercase">Trabajamos por tu salud</h1>
+                        <p class="car-p">El mejor equipo de profesionales, cuidándote siempre y en cada detalle. Los mejores productos con una excelente atención.</p>
+                    </div>
+                </div>
+                <div class="item bg bg2">
+                    <div class="carousel-caption">
+                        <h1 class="car-h1 text-uppercase">Fragancias Exclusivas</h1>
+                        <p class="car-p">Disponemos de un amplio stock en fragancias importadas y nacionales con todos los planes de financiación.</p>
+                    </div>
+                 </div>
+                <div class="item bg bg3">
+                    <div class="carousel-caption">
+                        <h1 class="car-h1 text-uppercase">Sabemos como Cuidarte</h1>
+                        <p class="car-p">Tu salud y la de tu familia en buenas manos siempre </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" 
+                href="#carousel-example-generic" 
+                role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" 
+                    aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" 
+                href="#carousel-example-generic" 
+                role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" 
+                    aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        
+        <div class="container marketing">
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Preparados Magistrales</h2>
+                    <p class="lead">Podemos preparate toda una amplia variedad de recetas magistrales y homeopáticas. Una larga trayectoria avala nuestra experiencia.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-responsive" 
+                        src="{% static 'img/mortero.jpg' %}" 
+                        alt="Mortero">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-5 col-md-push-7">
+                    <h2 class="featurette-heading">Obras Sociales</h2>
+                    <p class="lead">Aceptamos todas las obras sociales. Disponemos de una amplia cobertura.</p>
+                </div>
+                <div class="col-md-7 col-md-pull-5">
+                    <img class="img-responsive" 
+                        src="{% static 'img/obras-sociales.jpg' %}" 
+                        alt="Obras Sociales">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Envios a Domicilio</h2>
+                    <p class="lead">Realizamos envios a domicilio en todo el radio céntrico. Hacenos tu pedido por teléfono o redes sociales.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-responsive" 
+                        src="{% static 'img/delivery.jpg' %}" 
+                        alt="Delivery">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+        </div>
+
+
+        {% include 'home/footer.html' %}
+        {% include 'home/javascript.html' %}
+    </body>
+</html>
