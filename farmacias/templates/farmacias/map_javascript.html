@@ -1,0 +1,22 @@
+{%load staticfiles %}       
+<script type="text/javascript">
+
+var map;
+var LatLong = {lat: {{ pharmacy.lat|safe }}, lng: {{ pharmacy.lng|safe }}};
+
+console.log({{ pharmacy.lat }});
+
+function initMap() {
+				  map = new google.maps.Map(document.getElementById('map'), {
+									center: LatLong,
+									zoom: 15
+					});
+
+					var marker = new google.maps.Marker({
+									position: LatLong,
+									map:map,
+									title: " Farmacia {{ pharmacy.name|title }}"
+					});
+}
+</script>
+<script defer async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOw07sa_FLIN2n471QRuRR2pbw5HyGB-4&callback=initMap"></script>

@@ -1,1 +1,0 @@
-/home/augusto/dev/css/bootstrap3-ie10-viewport-bug-workaround/ie10-viewport-bug-workaround.js

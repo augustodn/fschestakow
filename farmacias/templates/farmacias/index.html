@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  {% load staticfiles %}
+  <head>
+    {% include 'head_links.html' %}
+  </head>
+  <body>
+  	{% include 'farmacias/nav-bar.html' %}
+    <br>
+    {%include 'farmacias/index_header.html' %}
+    <div class="content-div">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 content-col">
+    
+						{% if pharmacy_list %}
+							<table class="table table-striped">
+								<thead>
+										<tr>
+											<th>Farmacia</th>
+											<th>Teléfono</th>
+											<th>Dirección</th>
+										</tr>
+								</thead>
+								<tbody>
+
+									{% for pharmacy in pharmacy_list %}
+										<tr>
+											<td><a href="/farmacias/{{ pharmacy.id }}/">{{ pharmacy.name|title }}</a></td>
+											<td><a href="/farmacias/{{ pharmacy.id }}/">{{ pharmacy.phone }}</a></td>
+											<td><a href="/farmacias/{{ pharmacy.id }}/">{{ pharmacy.address|title }}</a></td>
+										</tr>
+									{% endfor %}
+								
+								</tbody>
+							</table>
+						{% else %}
+							<p>No hay farmacias en San Rafael.</p>
+						{% endif %}
+
+          </div>
+        </div>
+      </div>
+    </div>      
+
+    {% include 'footer.html' %}
+    {% include 'javascript.html' %}
+
+	</body>
+</html>

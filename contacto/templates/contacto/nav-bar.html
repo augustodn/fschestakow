@@ -19,7 +19,7 @@
                         <span class="icon-bar"></span>
 
                     </button>
-                    <a class="navbar-brand" href="../home/">
+                    <a class="navbar-brand" href="/">
                         <img class="img-responsive" 
                             src="{% static 'img/logo.jpg' %}" 
                             alt="logo">
@@ -32,13 +32,20 @@
                     id="bs-example-navbar-collapse-1">
                     
                     <ul class="nav navbar-nav">
-                        <li><a href="../home/">Principal</a></li>
+                        <li><a href="/">Principal</a></li>
                         <li><a href="#">Nosotros</a></li>
                         <li><a href="#">Productos</a></li>
-                        <li><a href="#">Farmacias de Turno</a></li>
-                        <li class="active"><a href="#">Contacto<span 
-                                class="sr-only">(current)</span></a>
-                        </li>
+												<li class="dropdown">
+													<a href="/farmacias/" class="dropdown-toggle"
+																			data-toggle="dropdown" 
+																			role="button" aria-haspopup="true" 
+																			aria-expanded="false">Farmacias<span class="caret"></span></a>
+													<ul class="dropdown-menu">
+														<li><a href="/farmacias/">Farmacias</a></li>
+														<li><a href="/farmacias/turnos/">Turnos</a></li>
+													</ul>
+        								</li>	
+												<li class="active"><a href="/contacto/">Contacto</a></li>
                     </ul>
 
                 </div><!-- /.navbar-collapse -->

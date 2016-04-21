@@ -3,11 +3,15 @@ from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 
 from .forms import ContactForm
+from farmacias.models import Pharmacy
 
 # Create your views here.
 
 
 def contact_form(request):
+
+    pharmacy = Pharmacy.objects.get(name='schestakow')
+
     if request.method == 'POST':
         form = ContactForm(request.POST)
 
@@ -30,4 +34,5 @@ def contact_form(request):
     else:
         form = ContactForm()
 
-    return render(request, 'contacto/contact.html', {'form': form})
+    return render(request, 'contacto/contact.html', {'form': form,
+                                                     'pharmacy': pharmacy})

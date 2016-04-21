@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+  {% load staticfiles %}
+  <head>
+    {% include 'head_links.html' %}
+  </head>
+  <body>
+  	{% include 'farmacias/nav-bar.html' %}
+    <br>
+    {%include 'farmacias/shift_header.html' %}
+    <div class="content-div">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 content-col">
+    
+						{% if shift_list %}
+							<table class="table table-striped">
+								<thead>
+										<tr>
+											<th>Fecha</th>
+											<th>Hasta las 24</th>
+											<th>Toda la Noche</th>
+											<th></th>
+										</tr>
+								</thead>
+								<tbody>
+
+									{% for shift in shift_list %}
+										<tr>
+											<td>{{ shift.date }}</td>
+											<td><a href="/farmacias/{{ shift.close_at_24.id }}/">{{ shift.close_at_24|title }}</a></td>
+											<td><a href="/farmacias/{{ shift.all_night_1.id }}/">{{ shift.all_night_1|title }}</a></td>
+											<td><a href="/farmacias/{{ shift.all_night_2.id }}/">{{ shift.all_night_2|title }}</a></td>
+										</tr>
+									{% endfor %}
+								
+								</tbody>
+							</table>
+						{% else %}
+							<p>No hay turnos validos en San Rafael.</p>
+						{% endif %}
+
+          </div>
+        </div>
+      </div>
+    </div>      
+
+    {% include 'footer.html' %}
+    {% include 'javascript.html' %}
+
+	</body>
+</html>

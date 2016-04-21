@@ -5,5 +5,25 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery.min.js' %}"><\/script>')</script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!--<script src="{% static 'js/google-maps-api.js' %}"></script>-->
+<script type="text/javascript">
+
+var map;
+var LatLong = {lat: {{ pharmacy.lat|safe }}, lng: {{ pharmacy.lng|safe }}};
+
+function initMap() {
+				  map = new google.maps.Map(document.getElementById('map'), {
+									center: LatLong,
+									zoom: 15
+					});
+
+					var marker = new google.maps.Marker({
+									position: LatLong,
+									map:map,
+									title: " Farmacia {{ pharmacy.name|title }}"
+					});
+}
+</script>
+<script defer async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOw07sa_FLIN2n471QRuRR2pbw5HyGB-4&callback=initMap"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script> 
+<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
