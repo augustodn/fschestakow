@@ -17,14 +17,18 @@
 
 
 .carousel-caption{
-    width: 300px;
+    width: 30%;
     background:rgba(0, 0, 0, 0.60);
-    top: 8%;
-    bottom: 25%;
-    position:relative;
-    left:15%;
-    border-radius:5%;
+    /*top: 8%;*/
+    bottom: 10%;
+    /*position:relative;*/
+    left: 35%;
+    border-radius: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
 }
+
+
 
 .footer{
     background-color: #216655;
@@ -33,7 +37,7 @@
 
 .car-h1{
     color: #73BAA1;
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: 700;
     border-bottom: 2px solid;
     padding-left:10px;
@@ -44,7 +48,7 @@
 .car-p{
     color: white;
     font-weight: 500;
-    font-size: x-large;
+    font-size: large;
     padding-left:10px;
     padding-right:10px;
 }
@@ -104,7 +108,7 @@ background-repeat:no-repeat;
 background-size:cover;
 }
 .carousel .carousel-inner .bg1 {
-background-image:url("../img/face-cover-2.jpg");
+background-image:url("../img/staff-cover.jpg");
 background-position: center top;
 }
 .carousel .carousel-inner .bg2 {
@@ -121,7 +125,7 @@ background-position: center top;
 	/*vh for relative sizes*/
 }
 
-@media only screen and (max-device-width: 750px) {
+@media only screen and (max-device-width: 750px){
     .navbar-header {
         float: none;
     }
@@ -174,5 +178,78 @@ background-position: center top;
 			padding:15px 20px;
 			font-size:2em;
 		}
+		.carousel-caption{
+    	width: 60%;
+    	background:rgba(0, 0, 0, 0.60);
+    	/*top: 8%;*/
+    	bottom: 5%;
+    	/*position:relative;*/
+    	left:20%;
+    	border-radius:20px;
+			padding-top:15px;
+			padding-bottom:15px;
+		}
+		.car-h1{
+			color: #73BAA1;
+			font-size: 40px;
+			font-weight: 700;
+			border-bottom: 2px solid;
+			padding-left:10px;
+			padding-right:10px;
+
+		}
+
+		.car-p{
+			color: white;
+			font-weight: 500;
+			font-size: 40px;
+			padding-left:10px;
+			padding-right:10px;
+		}
 }
 
+@media screen and (max-width:750px){
+	.carousel-caption{
+		width: 50%;
+		background:rgba(0, 0, 0, 0.60);
+		/*top: 8%;*/
+		bottom: 10%;
+		/*position:relative;*/
+		left: 25%;
+		border-radius: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+
+@media only screen and (max-device-width: 750px) and (orientation: landscape){
+		.carousel-caption{
+		width: 60%;
+		background:rgba(0, 0, 0, 0.60);
+		/*top: 8%;*/
+		bottom: 13%;
+		/*position:relative;*/
+		left: 21%;
+		border-radius: 20px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+}
+		.car-h1{
+			color: #73BAA1;
+			font-size: 25px;
+			font-weight: 700;
+			border-bottom: 2px solid;
+			padding-left:10px;
+			padding-right:10px;
+
+		}
+
+		.car-p{
+			color: white;
+			font-weight: 500;
+			font-size: 20px;
+			padding-left:10px;
+			padding-right:10px;
+		}
+
+}

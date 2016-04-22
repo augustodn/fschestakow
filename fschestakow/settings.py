@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'farmacias.apps.FarmaciasConfig',
     'contacto.apps.ContactoConfig',
+    'nosotros.apps.NosotrosConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

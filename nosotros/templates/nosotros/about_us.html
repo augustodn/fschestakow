@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    {% load staticfiles %}
+    <head>
+        {% include 'head_links.html' %}
+    </head>
+    <body>
+        {% include 'nosotros/nav-bar.html' %}
+        <br>
+        {%include 'nosotros/header.html' %}
+        <div class="content-div">
+            <div class="container">
+                <div class="row">
+									<div class="col-md-4 content-col">
+										<img class="img-responsive"
+												 src="http://loremflickr.com/800/600/"
+												 alt="img#1">
+									</div>
+									<div class="col-md-4 content-col">
+										<img class="img-responsive"
+												 src="http://loremflickr.com/800/600/"
+												 alt="img#2">
+									</div>
+									<div class="col-md-4 content-col">
+										<img class="img-responsive"
+												 src="{%static 'img/staff-cover-full.jpg' %}"
+												 alt="img#3">
+									</div>
+								</div>
+                <div class="row">
+                    <div class="col-md-6 content-col">
+											<p> Desde el año 19XX estamos con vos acompañándote en todo momento. Nuestra trayectoria y experiencia nos permiten brindarte
+											el mejor servicio, para que dispongas de todo lo que necesitas para tu salud y bienestar. Desde sus inicios y gracias a
+											la visión empresarial de Roque G. López, todos los días estamos con vos para cuidarte y trabajar por tu salud. Nuestro 
+											personal altamente capacitado se encargará de resolver todas tus necesidades.</p>
+											<p> Nuestros valores se basan en el trato preferencial, la calidez en la atención y la rapidez en la entrega de nuestros 
+											productos. Nos gusta tratarte especialmente, porque vos sos único. En cada acción que realizamos, la prioridad son nuestros 
+											clientes.</p>
+											<p> Contamos con diversos sistemas de pagos y promociones en perfumería para que puedas llevarte todo eso que necesitas. 
+											Además aceptamos obras sociales, bono solidario y mucho más. Como en todo lo que hacemos estás vos primero y estamos
+											convencidos en darte cada día un mejor servicio, nos interesa tu opinión. Para comunicarte con nosotros entrá a 
+											<a href="/contacto">contacto</a> y consultá por nuestro teléfono, dirección y correo electrónico.</p>
+                    </div>
+                    
+                    <div class="col-md-6 content-col">
+											<p> La vorágine del crecimiento y el compromiso con la satisfacción del cliente nos alienta a abrir las puertas a diversos
+											productos, además de la venta de medicamentos y preparados magistrales. Comprendemos que hay otras demandas que sólo pueden
+ 											ser satisfechas por la gestión y profesionalidad de nuestro personal. En simples palabras, esto implica innovar en la calidad
+											de nuestra atención al cliente con nuestros recursos humanos, mejorando nuestros procesos de trabajo y con planificacion
+											empresarial.</p>
+											<p> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 
+											1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by 
+											English versions from the 1914 translation by H. Rackham. 
+											</p>
+                    </div> <!-- col-md-6 -->
+                </div> <!-- row -->
+            </div> <!--container -->
+        </div> <!--content-->
+        
+        {% include 'footer.html' %}
+        {% include 'javascript.html' %}
+    </body>
+</html>
