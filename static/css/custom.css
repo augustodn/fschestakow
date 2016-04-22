@@ -20,12 +20,12 @@
     width: 30%;
     background:rgba(0, 0, 0, 0.60);
     /*top: 8%;*/
-    bottom: 10%;
+    bottom: 13%;
     /*position:relative;*/
     left: 35%;
     border-radius: 20px;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 }
 
 
@@ -205,6 +205,9 @@ background-position: center top;
 			font-size: 40px;
 			padding-left:10px;
 			padding-right:10px;
+		}
+		.table{
+			font-size: 29px;
 		}
 }
 
