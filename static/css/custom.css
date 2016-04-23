@@ -126,7 +126,7 @@ background-position: center top;
 }
 
 @media only screen and (max-device-width: 750px){
-    .navbar-header {
+   	.navbar-header {
         float: none;
     }
     .navbar-left,.navbar-right {
@@ -208,6 +208,25 @@ background-position: center top;
 		}
 		.table{
 			font-size: 29px;
+		}
+
+		.navbar-toggle .icon-bar+.icon-bar{
+			margin-top: 10px;
+		}
+		.navbar-toggle .icon-bar{
+			width: 58px;
+			height: 3px;
+		}
+		.navbar-toggle {
+			height: 80px;
+			width: 80px;
+		}
+		.navbar-brand>img {
+			height: 260%;
+		}
+
+		.navbar-header{
+			height: 80px;
 		}
 }
 
