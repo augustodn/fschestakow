@@ -11,11 +11,6 @@
     line-height: 80px;
 }
 
-.carousel{
-    padding-top: 50px;
-}
-
-
 .carousel-caption{
     width: 30%;
     background:rgba(0, 0, 0, 0.60);
@@ -125,24 +120,58 @@ background-position: center top;
 	/*vh for relative sizes*/
 }
 
+@media screen and (max-width:750px){
+	.carousel-caption{
+		width: 50%;
+		background:rgba(0, 0, 0, 0.60);
+		bottom: 10%;
+		left: 25%;
+		border-radius: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+
+/*
+ * MOBILE SETTINGS 
+ *
+ */
+
 @media only screen and (max-device-width: 750px){
-   	.navbar-header {
-        float: none;
+ 		html, body {
+			font-size: 1.5em;
+		}
+		p { 
+			font-size: .75em;
+		}
+		h1 {
+			font-size: 1.5em;
+			font-weight: 600
+		}
+		h2, h3{
+			font-size: 1.35em;
+		}
+		/* navbar settings */
+		.navbar-header {
+    	float: none;
     }
     .navbar-left,.navbar-right {
-        float: none !important;
+    	float: none !important;
     }
     .navbar-toggle {
-        display: block;
+      display: block;
     }
     .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+     	border-top: 1px solid transparent;
+     	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
     }
     .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-				max-height: none;
+			top: 0;
+			border-width: 0 0 1px;
+			margin-bottom: 0px;
+			border-bottom-width: 0px;
+			max-height: none;
+			position: relative;
     }
     .navbar-collapse.collapse {
         display: none!important;
@@ -151,15 +180,30 @@ background-position: center top;
         float: none!important;
         margin-top: 7.5px;
     }
-    .navbar-nav>li {
-				font-size: 2em;
+    .navbar-nav>li,
+	 	.navbar-nav .active>li 
+	 	.navbar-nav .active>li>a,
+	 	.navbar-nav .active>li>a:focus,
+	 	.navbar-nav .active>li>a:hover {
+				font-size: 100px;
         float: none;
     }
+		/*while clicking*/
+		.navbar-default .navbar-nav>li>a 
+		.navbar-default .navbar-nav>li>a:focus, 
+		.navbar-default .navbar-nav>li>a:hover {
+				font-size: 30px;
+        float: none;
+				padding-top: 30px;
+        padding-bottom: 30px;
+
+		}
     .navbar-nav>li>a {
+				font-size: 0.5em;
         padding-top: 30px;
         padding-bottom: 30px;
-				
     }
+
     .collapse.in{
         display:block !important;
 				max-height: none;
@@ -174,16 +218,41 @@ background-position: center top;
        -webkit-box-shadow: none;
        box-shadow: none;
     }
-		.dropdown-menu>li>a{
-			padding:15px 20px;
-			font-size:2em;
+		.navbar-toggle .icon-bar+.icon-bar{
+			margin-top: 10px;
 		}
+		.navbar-toggle .icon-bar{
+			width: 35px;
+			height: 3px;
+		}
+		.navbar-toggle {
+			height: 75%;
+			width: 70px;
+			padding-left: 16px;
+			margin-right: 0px;
+		}
+		.navbar-brand>img {
+			height: 200%;
+			padding-top: 8px;
+		}
+		.navbar-header{
+			height: 80px;
+		}
+		.btn-primary,
+		.btn-primary:active,
+		.btn-primary:visited,
+		.btn-primary:focus {
+			font-size: 1.20em;
+		}
+		.dropdown-menu>li>a{
+			padding: 15px 20px;
+			font-size: 2.75em;
+		}
+		/*carousel settings*/
 		.carousel-caption{
     	width: 60%;
     	background:rgba(0, 0, 0, 0.60);
-    	/*top: 8%;*/
     	bottom: 5%;
-    	/*position:relative;*/
     	left:20%;
     	border-radius:20px;
 			padding-top:15px;
@@ -198,7 +267,6 @@ background-position: center top;
 			padding-right:10px;
 
 		}
-
 		.car-p{
 			color: white;
 			font-weight: 500;
@@ -206,43 +274,30 @@ background-position: center top;
 			padding-left:10px;
 			padding-right:10px;
 		}
+		/*Some apps settings*/
+
 		.table{
-			font-size: 29px;
-		}
 
-		.navbar-toggle .icon-bar+.icon-bar{
-			margin-top: 10px;
+			font-size: 31px;
 		}
-		.navbar-toggle .icon-bar{
-			width: 58px;
-			height: 3px;
+		.table>thead>tr>th{
+			vertical-align: top;
 		}
-		.navbar-toggle {
-			height: 80px;
-			width: 80px;
+		.table>tbody>tr>td{
+			vertical-align: middle;
 		}
-		.navbar-brand>img {
-			height: 260%;
+		#map{
+			height: 35vh;
 		}
-
-		.navbar-header{
-			height: 80px;
+		.form-control{
+			height: 1.5em;
+			font-size: 1.1em;
+		}
+		.title-text{
+    padding-top: 0px;
 		}
 }
 
-@media screen and (max-width:750px){
-	.carousel-caption{
-		width: 50%;
-		background:rgba(0, 0, 0, 0.60);
-		/*top: 8%;*/
-		bottom: 10%;
-		/*position:relative;*/
-		left: 25%;
-		border-radius: 20px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-	}
-}
 
 @media only screen and (max-device-width: 750px) and (orientation: landscape){
 		.carousel-caption{
