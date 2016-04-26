@@ -23,8 +23,6 @@
 		padding-bottom: 0px;
 }
 
-
-
 .footer{
     background-color: #216655;
     color: white;
@@ -65,10 +63,6 @@
 
 .title-div{
     background-color: #D0E0D3;
-}
-
-.title-text{
-    padding-top: 40px;
 }
 
 .content-col{
@@ -120,7 +114,12 @@ background-position: center top;
 	/*vh for relative sizes*/
 }
 
-@media screen and (max-width:750px){
+.navbar-fixed-top {
+		position: relative;
+		margin-bottom: 0px;
+}
+
+@media screen and (max-width:990px){
 	
 	.carousel-caption{
 		width: 70%;
@@ -130,10 +129,13 @@ background-position: center top;
 	#map{
 		height: 45vh;
 	}
+	.col-footer-text, .col-social{
+			text-align: center;
+	}
 }
 		
 
-@media only screen and (max-device-width: 750px) and (orientation: landscape){
+@media screen and (max-device-width: 990px) and (orientation: landscape){
 	.carousel-caption{
 		width: 75%;
 		left: 12.5%;
