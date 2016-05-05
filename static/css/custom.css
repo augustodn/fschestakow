@@ -3,8 +3,8 @@
 }
 
 .featurette-divider{
-    margin: 80px 0;
-    border-top:0;
+    margin: 50px 0;
+    border-width: 0;
 }
 
 .carrousel-divider{
@@ -67,8 +67,8 @@
 }
 
 .content-col{
-    padding-top:60px;
-    padding-bottom:60px;
+    padding-top:30px;
+    padding-bottom:30px;
 }
 
 .cf-text{
